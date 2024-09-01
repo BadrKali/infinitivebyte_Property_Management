@@ -23,7 +23,7 @@ This is the backend for a property management system, built with Django and Djan
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/your-repository.git
+   git clone https://github.com/BadrKali/infinitivebyte_Property_Management.git
    cd your-repository
    ```
 
@@ -59,7 +59,7 @@ This is the backend for a property management system, built with Django and Djan
 
 ## API Documentation
 
-For a detailed explanation of the API endpoints and their usage, please refer to [API documentation](https://github.com/BadrKali/infinitivebyte_Property_Management_Application/blob/main/backend/api-endpoints.md).
+For a detailed explanation of the API endpoints and their usage, please refer to [API documentation](https://github.com/BadrKali/infinitivebyte_Property_Management/blob/main/backend/api-endpoints.md).
 
 This documentation provides comprehensive information about:
 - Available endpoints
