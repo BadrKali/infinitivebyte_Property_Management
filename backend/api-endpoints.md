@@ -280,4 +280,4 @@ http://127.0.0.1:8000/myapi/
 - **Trigger a Mock Email Notification**
   - **Endpoint**: `/tenants/<id>/notify/`
   - **Method**: POST
-  - **Description**: Triggers a mock email notification for
+  - **Description**: Triggers a mock email notification
