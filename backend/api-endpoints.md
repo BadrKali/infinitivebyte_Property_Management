@@ -15,7 +15,7 @@ http://127.0.0.1:8000/myapi/
 ### 1. User Authentication and Management
 
 - **Register a New User**
-  - **Endpoint**: `/register/`
+  - **Endpoint**: `/auth/register/`
   - **Method**: POST
   - **Description**: Registers a new user in the system.
   - **Request Body**:
@@ -31,7 +31,7 @@ http://127.0.0.1:8000/myapi/
     - `400 Bad Request`: Validation error.
 
 - **Log In a User**
-  - **Endpoint**: `/login/`
+  - **Endpoint**: `/auth/login/`
   - **Method**: POST
   - **Description**: Logs in a user and returns a JWT token.
   - **Request Body**:
@@ -46,7 +46,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: Invalid credentials.
 
 - **Retrieve User Profile**
-  - **Endpoint**: `/profile/`
+  - **Endpoint**: `/auth/profile/`
   - **Method**: GET
   - **Description**: Retrieves the profile of the logged-in user.
   - **Response**:
@@ -54,7 +54,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Refresh Access Token**
-  - **Endpoint**: `/refresh/`
+  - **Endpoint**: `/auth/refresh/`
   - **Method**: POST
   - **Description**: Refreshes the user's access token using a valid refresh token.
   - **Request Body**:
@@ -68,7 +68,7 @@ http://127.0.0.1:8000/myapi/
 ### 2. Property Management
 
 - **List All Properties**
-  - **Endpoint**: `/properties/`
+  - **Endpoint**: `/user/properties/`
   - **Method**: GET
   - **Description**: Lists all properties associated with the logged-in user.
   - **Response**:
@@ -77,7 +77,7 @@ http://127.0.0.1:8000/myapi/
 
 
 - **Create a New Property**
-  - **Endpoint**: `/properties/`
+  - **Endpoint**: `/user/properties/`
   - **Method**: POST
   - **Description**: Creates a new property for the logged-in user.
   - **Request Body**:
@@ -99,7 +99,7 @@ http://127.0.0.1:8000/myapi/
 
 
 - **Retrieve Property Details**
-  - **Endpoint**: `/properties/<id>/`
+  - **Endpoint**: `/user/properties/<id>/`
   - **Method**: GET
   - **Description**: Retrieves details of a specific property by its ID.
   - **Response**:
@@ -108,7 +108,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Update Property Details**
-  - **Endpoint**: `/properties/<id>/`
+  - **Endpoint**: `/user/properties/<id>/`
   - **Method**: PUT
   - **Description**: Updates details of a specific property by its ID.
   - **Request Body**:
@@ -130,7 +130,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Delete a Property**
-  - **Endpoint**: `/properties/<id>/`
+  - **Endpoint**: `/user/properties/<id>/`
   - **Method**: DELETE
   - **Description**: Deletes a specific property by its ID.
   - **Response**:
@@ -143,7 +143,7 @@ http://127.0.0.1:8000/myapi/
 ### 3. Tenant Management
 
 - **List All Tenants**
-  - **Endpoint**: `/properties/<id>/tenants/`
+  - **Endpoint**: `/user/properties/<id>/tenants/`
   - **Method**: GET
   - **Description**: Lists all tenants associated with a specific property by its ID.
   - **Response**:
@@ -152,7 +152,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Add a New Tenant**
-  - **Endpoint**: `/properties/<id>/tenants/`
+  - **Endpoint**: `/user/properties/<id>/tenants/`
   - **Method**: POST
   - **Description**: Adds a new tenant to a specific property.
   - **Request Body**:
@@ -172,7 +172,7 @@ http://127.0.0.1:8000/myapi/
 
 
 - **Retrieve Tenant Details**
-  - **Endpoint**: `/tenants/<id>/`
+  - **Endpoint**: `/user/tenants/<id>/`
   - **Method**: GET
   - **Description**: Retrieves details of a specific tenant by their ID.
   - **Response**:
@@ -181,7 +181,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Update Tenant Details**
-  - **Endpoint**: `/tenants/<id>/`
+  - **Endpoint**: `/user/tenants/<id>/`
   - **Method**: PUT
   - **Description**: Updates details of a specific tenant by their ID.
   - **Request Body**:
@@ -200,7 +200,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Delete a Tenant**
-  - **Endpoint**: `/tenants/<id>/`
+  - **Endpoint**: `/user/tenants/<id>/`
   - **Method**: DELETE
   - **Description**: Deletes a specific tenant by their ID.
   - **Response**:
@@ -213,7 +213,7 @@ http://127.0.0.1:8000/myapi/
 ### 4. Rental Payments Monitoring
 
 - **List All Payments by a Tenant**
-  - **Endpoint**: `/tenants/<id>/payments/`
+  - **Endpoint**: `/user/tenants/<id>/payments/`
   - **Method**: GET
   - **Description**: Lists all payments made by a specific tenant.
   - **Response**:
@@ -222,7 +222,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Record a New Payment**
-  - **Endpoint**: `/tenants/<id>/payments/`
+  - **Endpoint**: `/user/tenants/<id>/payments/`
   - **Method**: POST
   - **Description**: Records a new payment for a specific tenant.
   - **Request Body**:
@@ -240,7 +240,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Retrieve Payment Details**
-  - **Endpoint**: `/payments/<id>/`
+  - **Endpoint**: `/user/payments/<id>/`
   - **Method**: GET
   - **Description**: Retrieves details of a specific payment by its ID.
   - **Response**:
@@ -249,7 +249,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Update Payment Details**
-  - **Endpoint**: `/payments/<id>/`
+  - **Endpoint**: `/user/payments/<id>/`
   - **Method**: PUT
   - **Description**: Updates details of a specific payment by its ID.
   - **Request Body**:
@@ -267,7 +267,7 @@ http://127.0.0.1:8000/myapi/
     - `401 Unauthorized`: User not authenticated.
 
 - **Delete a Payment**
-  - **Endpoint**: `/payments/<id>/`
+  - **Endpoint**: `/user/payments/<id>/`
   - **Method**: DELETE
   - **Description**: Deletes a specific payment record by its ID.
   - **Response**:
@@ -278,6 +278,6 @@ http://127.0.0.1:8000/myapi/
 ### 5. Email Notifications
 
 - **Trigger a Mock Email Notification**
-  - **Endpoint**: `/tenants/<id>/notify/`
+  - **Endpoint**: `/user/tenants/<id>/notify/`
   - **Method**: POST
   - **Description**: Triggers a mock email notification
